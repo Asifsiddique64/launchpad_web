@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 
-const UNPROTECTED_PATH_PREFIX = ["/auth"];
+const UNPROTECTED_PATH_PREFIX = ["/auth", "/attachments"];
 
 export default function middleware(request: NextRequest) {
   const response = NextResponse.next();
@@ -23,7 +23,8 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico, sitemap.xml, robots.txt (metadata files)
      * - /auth/login, /auth/forgot-password (unprotected paths)
+     * - /attachments/* (attachment files)
      */
-    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|attachments).*)",
   ],
 };
