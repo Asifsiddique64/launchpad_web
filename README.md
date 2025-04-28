@@ -1,56 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Launchpad Web Application
 
-## System Requirements
 
-To run this application without any issues, please ensure you have the following:
 
-- Node.js v20.19.1 LTS
-- npm (comes with Node.js)
+## Features
 
-## Getting Started
+![Notice List View](screenshots/dashboard.png)
 
-First, run the development server:
+### 1. Notice Management
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<!-- - Create and edit notices with a user-friendly interface
+- Mark notices as read/unread with a toggle switch
+- Delete notices with confirmation dialog -->
+- List view with all notices
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Notice List View](screenshots/notice%20list.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Mark notices as read/unread with a toggle switch
 
-## Environment Setup
+![Notice List View](screenshots/read%20unread%20toggle.png)
 
-Before starting the application, you need to set up the required environment variables:
 
-1. Create a `.env.local` file in the root directory
-2. Add the following variables:
+- Delete notices with confirmation dialog
 
-```
-NEXT_PUBLIC_BASE_URL=your_api_base_url (https://68066228e81df7060eb6f6d2.mockapi.io) I used this
-```
+![Notice List View](screenshots/delete.png)
 
-This variable is required for the API service to function correctly. Without it, the application will show errors when trying to fetch data.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Rich Text Editor
+- Full-featured text editor for notice content
+- Support for:
+  - Bold, Italic, Underline
+  - Bullet Lists
+  - Numbered Lists
+- Real-time preview of formatted content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Rich Text Editor](screenshots/description.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. File Attachments
+- Support for both image and video attachments
+- Preview attachments in the notice list
+- Upload multiple files at once
+- Delete attachments individually
+- Responsive preview grid
 
-## Deploy on Vercel
+![Image Attachment](screenshots/image%20as%20attachment.png)
+![Video Attachment](screenshots/video%20as%20attachment.png)
+![Video Attachment](screenshots/deletei.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## API Integration
+
+The application uses a mock API for demonstration purposes. The API endpoints include:
+
+- mock api provides all data except the attachments 
+- Attachments are uploaded locally and its url is added to the mock api
+
+![Mock API](screenshots/mock%20api.png)
+
